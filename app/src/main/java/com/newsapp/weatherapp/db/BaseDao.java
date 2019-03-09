@@ -10,7 +10,7 @@ public interface BaseDao<T> {
     void insertAll(T objects);
 
     @Insert(onConflict = OnConflictStrategy.FAIL)
-    void insert(T object);
+    long insert(T object);
 
     @Update
     void update(T object);

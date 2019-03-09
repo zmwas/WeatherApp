@@ -6,5 +6,6 @@ import com.newsapp.weatherapp.model.BookMark;
 
 public interface RecyclerViewCallback {
     void onItemClick(int position, BookMark bookMark, View v);
+    void onDelete(int position, BookMark bookMark, View v);
 
 }

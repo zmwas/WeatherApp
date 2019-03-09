@@ -19,8 +19,6 @@ import com.newsapp.weatherapp.databinding.BookmarksListLayoutBinding;
 import com.newsapp.weatherapp.model.BookMark;
 import com.newsapp.weatherapp.viewModel.BookMarkViewModel;
 
-import java.io.Serializable;
-
 import javax.inject.Inject;
 
 import dagger.android.support.AndroidSupportInjection;
@@ -60,6 +58,7 @@ public class BookMarkFragment extends Fragment implements RecyclerViewCallback {
                 binding.noBookmarksText.setVisibility(View.VISIBLE);
             }
         });
+
     }
 
     @Override
@@ -77,5 +76,10 @@ public class BookMarkFragment extends Fragment implements RecyclerViewCallback {
         transaction.replace(R.id.content, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    @Override
+    public void onDelete(int position, BookMark bookMark, View v) {
+        viewModel.deleteBookMark(bookMark);
     }
 }

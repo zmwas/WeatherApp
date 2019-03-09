@@ -25,4 +25,8 @@ public class BookMarkViewModel extends ViewModel {
     public LiveData<List<BookMark>> fetchBookMarks() {
         return repository.fetchBookMarks();
     }
+
+    public void deleteBookMark(BookMark bookMark) {
+        repository.deleteBookMark(bookMark);
+    }
 }
