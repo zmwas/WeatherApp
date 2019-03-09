@@ -31,6 +31,7 @@ public class ApiModule {
             HttpUrl url = request.url();
             HttpUrl newUrl = url.newBuilder()
                     .addQueryParameter("APPID", BuildConfig.APPID)
+                    .addQueryParameter("units","metric")
                     .build();
             Request.Builder builder = request.newBuilder()
                     .url(newUrl);
