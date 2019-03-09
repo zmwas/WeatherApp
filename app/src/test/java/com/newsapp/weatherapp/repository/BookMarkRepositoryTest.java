@@ -42,5 +42,4 @@ public class BookMarkRepositoryTest {
         bookMarkRepository.saveBookMark(bookMark);
         verify(bookmarkDao).insert(bookMark);
     }
-
 }
